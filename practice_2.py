@@ -14,5 +14,6 @@ for line in results[0]:
     code_line = line_str.replace("<br>", '\n')
     code_line = code_line.replace("</br>", '').replace('\ufffd', ' ')
     print(code_line)
+print("Bye Bye")
 
 
