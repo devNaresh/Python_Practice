@@ -17,6 +17,7 @@ class Form(QDialog):
         self.linedit.setFocus()
 
         self.linedit.returnPressed.connect(self.uichange)
+        self.linedit.returnPressed.connect(self.linedit.clear)
 
     def uichange(self):
         try:
