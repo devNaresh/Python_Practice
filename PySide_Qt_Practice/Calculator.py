@@ -7,6 +7,7 @@ class Form(QDialog):
         super().__init__(parent)
         self.browser = QTextBrowser()
         self.linedit = QLineEdit("Type Here and Press Enter")
+
         self.linedit.selectAll()
 
         widget = QVBoxLayout()
