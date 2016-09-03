@@ -13,10 +13,16 @@ __author__ = '__naresh__'
 #         else:
 #             raise ValueError('value must be > 0')
 
-class Quantity:
+class Quantity(object):
     __counter = 0
 
     def __init__(self):
+        """
+        In init the storage name is '_Quantity#0' not '__quantity0'
+        because name mangling of private variable is done when class 
+        definition run.
+        
+        """
         cls = self.__class__
         prefix = cls.__name__
         self.storage_name = "_{0}#{1}".format(prefix, cls.__counter)
@@ -32,7 +38,7 @@ class Quantity:
             raise ValueError("Value must be greater than zero")
 
 
-class LineItem:
+class LineItem(object):
     """
     Here weight, price is storage attribute
 
